@@ -13,13 +13,13 @@ public class ServicioCifrado {
             throw new IllegalArgumentException("El texto no puede estar vacío.");
         }
 
-        // 🔹 Normalizar texto
+        // Normalizar texto
         texto = Normalizador.normalizar(texto);
 
-        // 🔹 Validar parámetros
+        // Validar parámetros
         Validador.validar(tipo, parametro);
 
-        // 🔹 Normalizar clave si aplica
+        // Normalizar clave si aplica
         if (tipo.equals("Vigenere") || tipo.equals("Playfair")) {
             parametro = Normalizador.normalizar(parametro);
 
@@ -28,7 +28,7 @@ public class ServicioCifrado {
             }
         }
 
-        // 🔹 Crear cifrador
+        // Crear cifrador
         Cifrador cifrador = CifradoFactory.crear(tipo, parametro);
 
         return modoCifrado ? cifrador.cifrar(texto) : cifrador.descifrar(texto);
