@@ -35,7 +35,7 @@ public class MainUI extends JFrame {
         panelPrincipal.setBorder(new EmptyBorder(15, 15, 15, 15));
         panelPrincipal.setBackground(new Color(40, 55, 80));
 
-        // 🔝 Panel superior
+        // Panel superior
         JPanel panelSuperior = new JPanel(new GridBagLayout());
         panelSuperior.setBackground(new Color(40, 55, 80));
         GridBagConstraints gbc = new GridBagConstraints();
@@ -78,7 +78,7 @@ public class MainUI extends JFrame {
         gbc.gridwidth = 4;
         panelSuperior.add(etiquetaDescripcion, gbc);
 
-        // 📝 Panel central
+        // Panel central
         JPanel panelCentral = new JPanel(new GridBagLayout());
         panelCentral.setBackground(new Color(40, 55, 80));
         gbc = new GridBagConstraints();
@@ -123,7 +123,7 @@ public class MainUI extends JFrame {
         add(panelPrincipal);
     }
 
-    // 🎨 Helpers UI
+    // Helpers UI
 
     private JLabel crearEtiqueta(String texto) {
         JLabel etiqueta = new JLabel(texto);
@@ -140,7 +140,7 @@ public class MainUI extends JFrame {
         return area;
     }
 
-    // 🔄 Cambio de modo
+    // Cambio de modo
     private void alternarModo() {
         modoCifrado = !modoCifrado;
 
@@ -159,7 +159,7 @@ public class MainUI extends JFrame {
         }
     }
 
-    // 🔁 UI dinámica
+    // UI dinámica
     private void actualizarUIPorCifrado() {
     String seleccionado = (String) selectorCifrado.getSelectedItem();
 
